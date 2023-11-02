@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <title>PI - GRUPO7</title>
+    <link rel="icon" href="Imagens/Icon-marrom.svg">
+    
+</head>
+<body>
+    <!--MENU-->
+    <header class="menu-second">
+        <nav>
+            <img src="Imagens/Icon.svg">
+             <ul class="nav-list">
+                <li><a href="#inicio">INÍCIO</a></li>
+                <li><a href="#nos-somos">NÓS SOMOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--INICIO-->
+    <div id="titulo-inicio">
+        <h1>Uso de técnicas e tecnologias sustentáveis naprodução orgânica no</h1>
+        <h2>Brasil</h2>
+        <a class="bnt-artigo" href="Artigo.pdf" target="_blank">Visualizar artigo  --></a>
+    </div>
+    <main></main>
+    <!--CONTEUDO-->
+    <div id="text">
+        <h3 id="inicio" class="titulo">- Início</h3>
+        <img id="ifb" src="https://uploads.metropoles.com/wp-content/uploads/2017/03/30082525/270317-FM-Fachadas-073.jpg">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    <!--NOS SOMOS-->
+    <h3 id="nos-somos" class="titulo">- Nós Somos</h3>
+        <div id="alunas">
+            <div><img id="aluna" src="Imagens/camila.png"><p>Camila Crisostomo</p></div>
+            <div><img id="aluna" src="Imagens/eliza.png"><p>Eliza Silva</p></div>
+            <div><img id="aluna" src="Imagens/mafe.png"><p>Maria Fernanda Itacarambi</p></div>
+            <div><img id="aluna" src="Imagens/nikoly.png"><p>Nikoly Marques</p></div>
+            <div><img id="aluna5" src="Imagens/talitha.png"><p>Talitha Pereira</p></div>
+        </div>
+    </div>
+    <!--CONTATO-->
+    <div id="contact">
+        <div id="line"></div>
+        <div id="titulo-inicio">
+            <h1 id="contato">Entre em contato</h1>
+            <h2>CONOSCO</h2>
+        </div>
+            <section>
+                <form style="height: 50ovw;" action="https://formsubmit.co/quatroladosdoquadrado@gmail.com" method="POST">
+                    <div id="form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="texte.html">
+
+                    <label>NOME</label>
+                    <input  type="text" name="Nome" placeholder="Digite seu nome" autocomplete="off" required>
+                    
+                    <label>EMAIL</label>
+                    <input type="email" name="E-mail" placeholder="Digite seu email" autocomplete="off" required>
+                    
+                    <br>
+                    <label>MENSAGEM</label>
+                    <textarea name="mensagem" cols="0" rows="0" placeholder="Digite sua mensagem" required></textarea>
+                    
+                    <br>
+                    <button class="botao" type="submit">ENVIAR</button>
+                </div>
+                </form>
+            </section>
+            <!--RODAPÉ-->
+            <footer>
+                <img id="logo" src="Imagens/Icon.svg">
+                <div>
+                    <p>Confira também:</p>
+                    <a target="_blank" href="https://www.instagram.com/ifbrasilia/"><img class="icon" src="Imagens/instagram.png"></a>
+                    <a target="_blank" href="https://www.facebook.com/IFBrasilia/?locale=pt_BR"><img class="icon" src="Imagens/facebook.png"></a>
+                </div>
+            </footer>
+    </div>
+    </body>
+    <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+            
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    </script>
+</html>

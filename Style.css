@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: OCR A Std, monospace;
+}
+/*MENU*/
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 4vw;
+    transition: 0.4s;
+}
+header a:hover{
+    opacity: 0.7;
+}
+.menu-second nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #42200C;;
+    height: 25vw;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+.nav-list li{
+    letter-spacing: 0.2vw;
+    margin-left: 3vw;
+}
+header img{
+    height: 10vw;
+}
+/*INICIO*/
+main{
+    background: url("Imagens/Inicio.png") no-repeat center center;
+    background-size: cover;
+    height: 88vh;
+}
+#titulo-inicio{
+    position: absolute;
+    margin-left: 6vw;
+    margin-top: 15vw;
+    margin-right: 6vw;
+}
+h1,h2{
+    color: #ffffff;
+    line-height: 11vw;
+}
+h1{
+    font-size: 10vw;
+}
+h2{
+    font-size: 15vw;
+}
+.bnt-artigo{
+    position: absolute;
+    margin-top: 12vw;
+    padding: 4vw;
+    background-color: #42200C;
+    color: #ffffff;
+    font-size: 5.5vw;
+    text-decoration: none;
+    border-radius: 1vw;
+    border: solid 0.2vw #42200C;
+    transition: 0.4s;
+    border: solid 1vw #42200C;
+}
+.bnt-artigo:hover{
+    opacity: 0.9;
+    border: solid 1vw #ffffff;
+}
+/*CONTEUDO*/
+#text{
+    position: relative;
+    margin-top: 10vw;
+    width: 80vw;
+    margin-left: 10vw;
+}
+h3{
+    margin-bottom: 3vw;
+    font-size: 8vw;
+    color: #42200C;
+}
+p{
+    text-indent: 5vw;
+    font-size: 5vw;
+    line-height: 5.5vw;
+    margin-bottom: 10vw;
+    text-align: justify;
+}
+#ifb{
+    float: right;
+    margin-left: 3vw;
+    border-radius: 1vw;
+    width: 40vw;
+}
+/*NÓS SOMOS*/
+.name{
+    list-style: none;
+    display: flex;
+}
+#alunas{
+    position: relative;
+    justify-content: center;
+}
+#aluna, #aluna5{
+    width: 50vw;
+    height: 50vw;
+    margin-top: 5vw;
+    border-radius: 50%;
+}
+#alunas div{
+    display: flex;
+    margin-left: 1.8vw;
+    flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vw;
+    height: 60%;
+}
+
+#alunas div p{
+    text-indent: 0;
+    text-align: center;
+    margin-top: 4vw;
+    font-size: 5vw;
+}
+#ifb, #aluna, #aluna5{
+    box-shadow: 1.5vw 1.5vw  #FDEEDD;
+}
+#line{
+    max-width: 100vw;
+    height: 0.5vw;
+    background-color: #6A4732;
+    margin-top: 3vw;
+
+}
+
+/*CONTATO*/
+#contact{
+    max-width: 100vw;
+    min-height: 45vw;
+    margin-top: 3vw;
+    background-color: #42200C;
+}
+#email{
+    width: 8vw;
+    margin-top: 3vw;
+    float: left; 
+}
+#contact p{
+    margin-top: 4vw;
+    color: #ffffff;
+}
+#titulo-inicio{
+    left: 4vw;
+}
+/*FORMULÁRIO*/
+section{
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 6vw;
+    margin-top: 6vw;
+ }
+#form{
+    position: relative;
+    margin-top: 55vw;
+    margin-left: 10vw;
+}
+section form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form label{
+    color: #ffffff;
+    font-size: 6vw;
+    margin-bottom: 0.5vw;
+}
+form input{
+    padding: 2vw;
+    width: 80vw;
+    outline: none;
+    border: 0;
+    margin-bottom: 3vw;
+    font-size: 4vw;
+    border-radius: 0.5vw;
+}
+form textarea{
+    padding: 2vw;
+    width: 80vw;
+    outline: none;
+    border: 0;
+    font-size: 4vw;
+    margin-bottom: 3vw;
+    border-radius: 0.5vw;
+}
+form button{
+    width: 25vw;
+    margin-left: 27.5vw;
+    margin-top: 1vw;
+    padding: 1.5VW;
+    cursor: pointer;
+    font-size: 4vw;
+    background: #ffffff;
+    border: 0.3vw solid #ffffff;
+    color: #42200C;
+    border-radius: 0.5vw;
+    transition: 0.5s;
+}
+form button:hover{
+    background: transparent;
+    color: #ffffff;
+}
+.botao{
+    position: relative;
+}
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #15592c;
+}
+/*RODAPÉ*/
+footer{
+    background-color: #6A4732;
+    color: #ffffff;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    margin-top: 10vw;
+    height: 20vw;
+    max-width: 100vw;
+}
+#logo{
+    height: 15vw;
+    margin-left: 6vw;
+}
+footer div{
+    position: absolute;
+    right: 6vw;
+    margin-bottom: 2vw;
+}
+footer p{
+    margin-bottom: 0.5vw;
+    text-indent: 0;
+}
+.icon{
+    width: 5vw;
+    margin-right: 0.5vw;
+    transition: 0.3s;
+}
+.icon:hover{
+    opacity: 0.7;
+}
+
+
+/*Computador*/
+@media(min-width: 600px) {
+    /*MENU*/
+    header a{
+        font-size: 1.6vw;
+        transition: 0.4s;
+    }
+    .menu-second nav{
+        height: 6vw;
+    }
+    .nav-list li{
+        letter-spacing: 0.2vw;
+        margin-left: 4vw;
+    }
+    header img{
+        height: 4vw;
+    }
+    /*INICIO*/
+    main{
+        height: 87vh;
+    }
+    #titulo-inicio{
+        margin-left: 6vw;
+        margin-top: 6vw;
+        margin-right: 6vw;
+    }
+    h1{
+        font-size: 4vw;
+        line-height: 4.5vw;
+        width: 55vw;
+    }
+    h2{
+        font-size: 5.5vw;
+    }
+    .bnt-artigo{
+        margin-top: 4vw;
+        padding: 1.5vw;
+        font-size: 1.5vw;
+        border-radius: 1vw;
+        border: solid 0.2vw #42200C;
+    }
+    .bnt-artigo:hover{
+        border: solid 0.2vw #ffffff;
+    }
+    /*CONTEUDO*/
+    h3{
+        margin-bottom: 1.5vw;
+        font-size: 3vw;
+        color: #42200C;
+    }
+    p{
+        font-size: 1.5vw;
+        line-height: 2vw;
+        margin-bottom: 3vw;
+    }
+    #ifb{
+        margin-left: 2vw;
+        margin-bottom: 1vw;
+        width: 40vw;
+    }
+    /*NÓS SOMOS*/
+    #aluna, #aluna5{
+        width: 14vw;
+        height: 14vw;
+        margin-top: 3vw;
+    }
+    #alunas{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    #alunas div{
+        margin-left: 1.8vw;
+    }
+    #alunas div p{
+        font-size: 1.5vw;
+        margin-top: 1vw;
+    }
+    #ifb, #aluna, #aluna5{
+        box-shadow: 0.8vw 0.8vw  #FDEEDD;
+    }
+    #line{
+        width: 98.6vw;
+        height: 0.5vw;
+        background-color: #6A4732;
+    }
+    /*CONTATO*/
+    #contact{
+        height: 45vw;
+    }
+    #email{
+        width: 4vw;
+        margin-top: 3vw;
+    }
+    #contact p{
+        margin-top: 4vw;
+    }
+    /*FORMULÁRIO*/
+    section{
+        max-width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 6vw;
+        margin-top: 6vw;
+    }
+    #form{
+        position: absolute;
+        margin-top: 0;
+        margin-left: 50vw;
+        width: 40vw;
+    }
+    section form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    form label{
+        color: #ffffff;
+        font-size: 2vw;
+        margin-bottom: 0.5vw;
+    }
+    form input{
+        padding: 1vw;
+        width: 36vw;
+        outline: none;
+        border: 0;
+        margin-bottom: 2vw;
+        font-size: 1.5vw;
+        border-radius: 0.5vw;
+    }
+    form textarea{
+        padding: 1vw;
+        width: 36vw;
+        outline: none;
+        border: 0;
+        font-size: 2vw;
+        margin-bottom: 3vw;
+        border-radius: 0.5vw;
+    }
+    form button{
+        width: 15vw;
+        margin-left: 12.5vw;
+        padding: 1vw;
+        cursor: pointer;
+        font-size: 2vw;
+        background: #ffffff;
+        border: 0.3vw solid #ffffff;
+        color: #42200C;
+        border-radius: 0.5vw;
+        transition: 0.5s;
+    }
+    form button:hover{
+        background: transparent;
+        color: #ffffff;
+    }
+    .botao{
+        position: relative;
+    }
+    .campo input:focus, .campo select:focus, .campo textarea:focus {
+        background: #15592c;
+    }
+    /*RODAPÉ*/
+    footer{
+        font-size: 2vw;
+        height: 10vw;
+        margin-top: 36vw;
+        width: 98.7vw;
+    }
+    #logo{
+        height: 7vw;
+    }
+    footer div{
+        right: 6vw;
+        margin-bottom: 2vw;
+    }
+    footer p{
+        margin-bottom: 0.5vw;
+        text-indent: 0;
+    }
+    .icon{
+        width: 3vw;
+        margin-right: 0.5vw;
+        transition: 0.3s;
+    }
+}
