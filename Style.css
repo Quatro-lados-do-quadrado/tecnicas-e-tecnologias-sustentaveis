@@ -20,17 +20,10 @@ header a:hover{
     background: #42200C;;
     height: 25vw;
 }
-.nav-list{
-    list-style: none;
-    display: flex;
-}
-.nav-list li{
-    letter-spacing: 0.2vw;
-    margin-left: 3vw;
-}
+
 header img{
-    height: 0;
-    margin-left: -20vw;
+    height: 10vw;
+    right: 5vw;
 }
 header img:hover{
     opacity: 0.7;
@@ -105,6 +98,22 @@ p{
     border-radius: 1vw;
     width: 40vw;
 }
+/*ROLAR PRA CIMA*/
+#scrollTopBtn {
+    position: fixed;
+    bottom: 1vw;
+    right: 1vw;
+    padding: 1.5vw;
+    background-color: #2a1204;
+    border-radius: 1vw;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+}
+#scrollTopBtn img{
+    width: 5vw;
+}
 /*NÓS SOMOS*/
 .name{
     list-style: none;
@@ -115,6 +124,7 @@ p{
     justify-content: center;
 }
 #aluna, #aluna5{
+    position: relative;
     width: 50vw;
     height: 50vw;
     margin-top: 5vw;
@@ -146,7 +156,6 @@ p{
     margin-top: 3vw;
 
 }
-
 /*CONTATO*/
 #contact{
     max-width: 100vw;
@@ -190,6 +199,7 @@ form label{
     color: #ffffff;
     font-size: 6vw;
     margin-bottom: 0.5vw;
+    z-index: 0;
 }
 form input{
     padding: 2vw;
@@ -199,6 +209,7 @@ form input{
     margin-bottom: 3vw;
     font-size: 4vw;
     border-radius: 0.5vw;
+    z-index: 0;
 }
 form textarea{
     padding: 2vw;
@@ -286,7 +297,7 @@ footer p{
     }
     header img{
         height: 4vw;
-        margin-left: 0vw;
+        margin-left: 6vw;
     }
     /*INICIO*/
     main{
@@ -335,6 +346,20 @@ footer p{
         margin-left: 2vw;
         margin-bottom: 1vw;
         width: 40vw;
+    }
+    /*ROLAR PRA CIMA*/
+    #scrollTopBtn {
+        bottom: 1vw;
+        right: 1vw;
+        padding: 1vw;
+        border-radius: 1vw;
+    }
+    #scrollTopBtn:hover{
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(-0.5vw);
+    }
+    #scrollTopBtn img{
+        width: 2vw;
     }
     /*NÓS SOMOS*/
     #aluna, #aluna5{
@@ -461,5 +486,95 @@ footer p{
         width: 3vw;
         margin-right: 0.5vw;
         transition: 0.3s;
+    }
+}
+
+/*MENU LATERAL*/
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 12px 20px;
+}
+.logo img {width: 40px;}
+.menu {
+    display: flex;
+    margin-right: 6vw;
+}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {
+    width: 100%;
+}
+.open-menu , .close-menu {
+    position: absolute;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {
+    display: none;
+}
+.moveRight {
+    right: 0;
+}
+@media(max-width: 600px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        margin-right: 0;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #2a1204;
+        transition: all 0.8s ease-in-out;
+    }
+    .menu li {
+        margin-top: 5vw;
+    }
+    .menu li a {
+        padding: 7vw;
+        font-size: 7vw;
+    }
+    .open-menu , .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
     }
 }

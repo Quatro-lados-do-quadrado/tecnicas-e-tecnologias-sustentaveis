@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
     <title>PI - GRUPO7</title>
     <link rel="icon" href="Imagens/Icon-marrom.svg">
     
@@ -12,12 +13,17 @@
     <!--MENU-->
     <header id="subir" class="menu-second">
         <nav>
-            <img src="Imagens/Icon.svg">
-             <ul class="nav-list">
-                <li><a href="#inicio">INÍCIO</a></li>
-                <li><a href="#informacoes">INFORMAÇÕES</a></li>
-                <li><a href="#nos-somos">NÓS SOMOS</a></li>
-                <li><a href="#contato">CONTATO</a></li>
+            <ul class='nav-bar'>
+                <img src="Imagens/Icon.svg">
+                <input type='checkbox' id='check' />
+                <span class="menu" id="menu">
+                    <li><a href="#inicio">INÍCIO</a></li>
+                    <li><a href="#informacoes">INFORMAÇÕES</a></li>
+                    <li><a href="#nos-somos">NÓS SOMOS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
             </ul>
         </nav>
     </header>
@@ -56,6 +62,8 @@
         <p>
             Conclui-se que os pequenos produtores enfrentam diariamente dificuldades para produzir alimentos sem agrotóxicos, tornando a área de orgânicos de  difícil acesso para eles. Diante desse problema, existem projetos realizados por pesquisadores e professores no IFB-Campus Planaltina que  buscam compreender e melhorar a forma de cultivo dos agricultores orgânicos, por meio de  desenvolvimento de técnicas de manejo do solo,  do uso de diferentes tipos de tecnologias sustentáveis e projetos de extensão com assentamentos rurais próximos ao campus.
         </p>
+    <!--ROLAR PRA CIMA-->
+    <button id="scrollTopBtn"><img src="Imagens/pra-cima.png"></button>
     <!--NOS SOMOS-->
     <h3 id="nos-somos" class="titulo">- Nós Somos</h3>
         <div id="alunas">
@@ -109,6 +117,7 @@
     </div>
     </body>
     <script>
+        //ROLAGEM SUAVE
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -117,6 +126,41 @@
                         behavior: 'smooth'
                     });
                 });
+
             });
-    </script>
+        //MENU
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuCheckbox = document.getElementById('check');
+                const menu = document.querySelector('.menu');
+                const menuLinks = document.querySelectorAll('.menu a');
+
+                const closeMenu = function () {
+                    menuCheckbox.checked = false;
+                    menu.style.right = '-100vw';
+                };
+
+                menuLinks.forEach(function (link) {
+                    link.addEventListener('click', closeMenu);
+                });
+
+                menuCheckbox.addEventListener('change', function () {
+                    menu.style.right = this.checked ? '0' : '-100vw';
+                });
+            });
+        //TOPO
+            document.addEventListener('DOMContentLoaded', function () {
+                var scrollTopBtn = document.getElementById('scrollTopBtn');
+
+                scrollTopBtn.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+                window.addEventListener('scroll', function () {
+                    scrollTopBtn.style.display = window.scrollY > 750 ? 'block' : 'none';
+                });
+            });
+        </script>
 </html>
